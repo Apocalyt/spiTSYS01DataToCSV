@@ -24,13 +24,14 @@ while True:
   
   
   string = data_in1.decode("utf-8")
-    
 
-  if string == "end":
+  lines = string.splitlines();
+
+  if lines[0] == "end;":
     break
     
   # Write CSV to file
   fo.write(string)
-  print(string)
+  print(string,end="")
 
 fo.close();
